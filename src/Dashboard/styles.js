@@ -88,3 +88,36 @@ export const DatepickerWrapper = styled.div`
 export const DatepickerLabel = styled.label`
   padding-right: 5px;
 `;
+
+export const AccountSelectorWrapper = styled.div`
+position: relative;
+display: inline-block;
+`;
+
+export const AccountSelectorButton = styled.div`
+background-color: #4CAF50;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+div.hover {background-color: #3e8e41}
+`;
+
+export const AccountSelectorItems = styled.div`
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+.div:hover {display: block}
+`;
+
+export const AccountSelectorLinks = styled.a`
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+a:hover {background-color: #f1f1f1}
+`;
