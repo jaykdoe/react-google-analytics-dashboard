@@ -165,8 +165,8 @@ const SourceReport = (props) => {
       viewID: props.viewID,
       startDate,
       endDate,
-      metrics: "ga:users",
-      dimensions: ["ga:source", "ga:date"],
+      metrics: "users",
+      dimensions: ["source", "date"],
     };
     setTimeout(
       () =>

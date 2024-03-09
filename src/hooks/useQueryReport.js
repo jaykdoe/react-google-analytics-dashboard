@@ -27,17 +27,18 @@ export function useQueryReport() {
         filter,
       } = props;
       const resp = await fetch(
-        "https://analyticsreporting.googleapis.com/v4/reports:batchGet",
+        // "https://analyticsreporting.googleapis.com/v4/reports:batchGet"
+        "https://analyticsdata.googleapis.com/v1beta/" + viewID + ":batchRunReports",
         {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
-            reportRequests: [
+            requests: [
               {
-                viewId: viewID,
-                filtersExpression: filter,
+                property: viewID,
+                // filtersExpression: filter,
                 dateRanges: [
                   {
                     startDate: format(new Date(startDate), "yyyy-MM-dd"),

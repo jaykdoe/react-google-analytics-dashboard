@@ -43,13 +43,13 @@ const PageviewsReport = (props) => {
       viewID: props.viewID,
       startDate,
       endDate,
-      metrics: "ga:pageviews",
-      dimensions: ["ga:pagePath"],
+      metrics: "totalUsers",
+      dimensions: ["pagePath"],
       orderBy: {
-        fieldName: "ga:pageViews",
+        fieldName: "totalUsers",
         order: "DESCENDING",
       },
-      filter: "ga:pagePath!@localhost/",
+      filter: "pagePath!@localhost/",
     };
     setTimeout(
       () =>

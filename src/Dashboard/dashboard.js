@@ -18,12 +18,12 @@ const DashBoard = () => {
       {viewID ? (
         <>
           <DayVisitsReport
-            metric={"ga:users"}
+            metric={"users"}
             title={"Users"}
             viewID={viewID}
           />
           <DayVisitsReport
-            metric={"ga:sessions"}
+            metric={"sessions"}
             title={"Sessions"}
             viewID={viewID}
           />

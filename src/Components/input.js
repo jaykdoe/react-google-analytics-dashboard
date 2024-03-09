@@ -17,7 +17,7 @@ const InputField = ({ submitViewId }) => {
           name="viewid"
           value={viewID}
           onChange={(e) => setViewID(e.target.value)}
-          placeholder="Enter viewID"
+          placeholder="Enter Property ID"
         />
         <button type="submit" onClick={handleSubmit}>
           SUBMIT

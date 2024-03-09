@@ -63,8 +63,8 @@ const DevicesReport = (props) => {
       viewID: props.viewID,
       startDate,
       endDate,
-      metrics: "ga:users",
-      dimensions: ["ga:deviceCategory"],
+      metrics: "users",
+      dimensions: ["deviceCategory"],
     };
     setTimeout(
       () =>

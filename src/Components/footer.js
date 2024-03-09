@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { GoMarkGithub } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
 import logo from "../assets/logo.png";
 
 const Footer = () => (
@@ -20,7 +20,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <GoMarkGithub />
+        <FaGithub />
         {`Source `}
       </a>
     </div>

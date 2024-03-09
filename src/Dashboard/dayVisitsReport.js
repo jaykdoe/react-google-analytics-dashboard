@@ -94,7 +94,7 @@ const DayVisitsReport = (props) => {
       startDate,
       endDate,
       metrics: props.metric,
-      dimensions: ["ga:date"],
+      dimensions: ["date"],
     };
     fetchData(request)
       .then((resp) => displayResults(resp))

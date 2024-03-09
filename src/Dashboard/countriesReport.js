@@ -56,10 +56,10 @@ const CountriesReport = (props) => {
       viewID: props.viewID,
       startDate,
       endDate,
-      metrics: "ga:users",
-      dimensions: ["ga:country"],
+      metrics: "users",
+      dimensions: ["country"],
       orderBy: {
-        fieldName: "ga:users",
+        fieldName: "users",
         order: "DESCENDING",
       },
     };

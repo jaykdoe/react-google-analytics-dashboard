@@ -68,8 +68,8 @@ const BrowsersReport = (props) => {
       viewID: props.viewID,
       startDate,
       endDate,
-      metrics: "ga:users",
-      dimensions: ["ga:browser"],
+      metrics: "users",
+      dimensions: ["browser"],
     };
     setTimeout(
       () =>
