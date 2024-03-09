@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaRegQuestionCircle } from "react-icons/fa";
-import accountSelector from "../Dashboard/accountSelect";
+import { AccountSelector } from "../Dashboard/accountSelect";
 
 const InputField = ({ submitViewId }) => {
   const [viewID, setViewID] = useState("");
@@ -13,7 +13,7 @@ const InputField = ({ submitViewId }) => {
   return (
     
     <InputRow>
-    <accountSelector/>
+    <AccountSelector/>
       <form>
         <input
           type="text"

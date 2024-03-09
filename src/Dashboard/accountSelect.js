@@ -1,6 +1,6 @@
 import React from 'react'
 import { AccountSelectorDiv, AccountSelectorButton, AccountSelectorLinks, AccountSelectorItems } from "./styles";
-const accountSelector = () => {
+const AccountSelector = () => {
   return (
     <AccountSelectorDiv>
         <div class="dropdown">
@@ -22,4 +22,4 @@ const accountSelector = () => {
   )
 }
 
-export default accountSelector
+export default AccountSelector
