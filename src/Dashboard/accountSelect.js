@@ -1,23 +1,23 @@
 import React from 'react'
-import { AccountSelectorWrapper, AccountSelectorButton, AccountSelectorLinks, AccountSelectorItems } from "./styles";
+import { AccountSelectorDiv, AccountSelectorButton, AccountSelectorLinks, AccountSelectorItems } from "./styles";
 const accountSelector = () => {
   return (
-    <AccountSelectorWrapper>
+    <AccountSelectorDiv>
+        <div class="dropdown">
         <AccountSelectorButton>
-            <AccountSelectorItems>
-                <AccountSelectorLinks>
-                <div class="dropdown">
-                    <button class="dropbtn">Dropdown</button>
-                    <div class="dropdown-content">
-                        <a href="c">Link 1</a>
-                        <a href="https://google.com">Link 2</a>
-                        <a href="https://google.com">Link 3</a>
-                    </div>
-                </div>
-                </AccountSelectorLinks>
-            </AccountSelectorItems>
+            <button class="dropbtn">Dropdown</button>
         </AccountSelectorButton>
-    </AccountSelectorWrapper>
+            <AccountSelectorItems>
+                <div class="dropdown-content">
+                <AccountSelectorLinks>
+                    <a href="c">Link 1</a>
+                    <a href="https://google.com">Link 2</a>
+                    <a href="https://google.com">Link 3</a>               
+                </AccountSelectorLinks>
+                </div>
+            </AccountSelectorItems>
+        </div>
+    </AccountSelectorDiv>
 
   )
 }

@@ -89,7 +89,7 @@ export const DatepickerLabel = styled.label`
   padding-right: 5px;
 `;
 
-export const AccountSelectorWrapper = styled.div`
+export const AccountSelectorDiv = styled.div`
 position: relative;
 display: inline-block;
 `;
