@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaRegQuestionCircle } from "react-icons/fa";
-import { AccountSelector } from "../Dashboard/accountSelect";
+import AccountSelector from "../Dashboard/accountSelect";
 
 const InputField = ({ submitViewId }) => {
   const [viewID, setViewID] = useState("");
