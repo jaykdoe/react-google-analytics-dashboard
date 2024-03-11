@@ -8,13 +8,15 @@ import DevicesReport from "./devicesReport";
 import Header from "../Components/header";
 import { LastRow } from "./styles";
 import InputField from "../Components/input";
+//import AccountSelector from "./accountSelect";
 
 const DashBoard = () => {
   const [viewID, setViewID] = useState(null);
-
+//const accounts = localStorage.key("AnalyticsAccounts", 1)
   return (
     <>
       <Header />
+    
       {viewID ? (
         <>
           <DayVisitsReport

@@ -24,13 +24,16 @@ export function useQueryReport() {
         metrics,
         dimensions,
         orderBy,
-        filter,
+        //filter,
       } = props;
       const resp = await fetch(
         // "https://analyticsreporting.googleapis.com/v4/reports:batchGet"
-        "https://analyticsdata.googleapis.com/v1beta/" + viewID + ":batchRunReports",
+        //"https://analyticsdata.googleapis.com/v1beta/properties/" + viewID + ":batchRunReports",
+        //"https://analyticsdata.googleapis.com/v1beta/" + viewID + ":runReport",
+        "https://analyticsdata.googleapis.com/v1beta/properties/" + viewID + ":batchRunReports",
         {
           method: "POST",
+          mode: 'no-cors',
           headers: {
             Authorization: `Bearer ${token}`,
           },

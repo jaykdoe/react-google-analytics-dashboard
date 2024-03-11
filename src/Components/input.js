@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaRegQuestionCircle } from "react-icons/fa";
-import AccountSelector from "../Dashboard/accountSelect";
+//import AccountSelector from "../Dashboard/accountSelect";
+import { createDropdown } from "../hooks/list"
+//import { useAuthContext } from "../context/AuthContext";
+//import fetchAnalyticsAccounts from "../hooks/fetchAccounts";
+//import { DynamicDropdownForm } from "../hooks/dynamicDropdown";
 
 const InputField = ({ submitViewId }) => {
   const [viewID, setViewID] = useState("");
@@ -10,15 +14,50 @@ const InputField = ({ submitViewId }) => {
     e.preventDefault();
     submitViewId(viewID);
   };
+ // const { accessToken } = useAuthContext();
+  //const AccountsList = fetchAnalyticsAccounts(accessToken);
+// Function to get accounts from localStorage
+// Function to get accounts from localStorage
+// Function to get accounts from localStorage
+
+ // Assuming there is an element with id "dropdown-container" where the dropdown should be appended
+ const getAccountsFromLocalStorage = () => {
+  const localStorageData = localStorage.getItem("AnalyticsAccounts");
+  if (localStorageData) {
+    const parsedData = JSON.parse(localStorageData);
+    return parsedData.data.accounts;  // Extract the accounts from the "data" key
+  }
+  return [];
+};
+const [selectedValue, setSelectedValue] = useState('');
+const handleOptionClick = (option) => {
+  setSelectedValue(option);
+};
+
+const accountData = getAccountsFromLocalStorage();
+createDropdown(accountData, "AccountsDropdown"); 
+
   return (
-    
+
+    <main class="w-screen h-screen bg-primary p-2 text-white flex items-center justify-center">
+    <>
     <InputRow>
-    <AccountSelector/>
+    
+    
       <form>
+      <div id="AccountsDropdown" onClick={handleOptionClick}> </div>
+
+
+  
+ 
+
+      
         <input
+        class="my-[50px] w-[400px]"
           type="text"
           name="viewid"
-          value={viewID}
+           value={viewID}
+          //value={selectedValue}
           onChange={(e) => setViewID(e.target.value)}
           placeholder="Enter Property ID"
         />
@@ -32,8 +71,10 @@ const InputField = ({ submitViewId }) => {
         >
           <FaRegQuestionCircle />
         </a>
+       
       </form>
-    </InputRow>
+    </InputRow></>
+    </main>
   );
 };
 
